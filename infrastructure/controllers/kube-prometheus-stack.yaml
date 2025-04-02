@@ -9,7 +9,7 @@ metadata:
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
-  name: prometheus-community
+  name: kube-prometheus-stack
   namespace: prometheus-community
 spec:
   interval: 24h
