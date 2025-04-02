@@ -4,10 +4,10 @@ metadata:
   name: podinfo
   namespace: podinfo
 spec:
-  releaseName: podinfo
+  releaseName: devopsabi
   chart:
     spec:
-      chart: devopsabi/app01
+      chart: app01
       sourceRef:
         kind: HelmRepository
         name: podinfo
