@@ -5,4 +5,4 @@ metadata:
   namespace: podinfo
 spec:
   interval: 5m
-  url: https://devopsabi.github.io/helm-repo/
+  url: https://stefanprodan.github.io/podinfo
