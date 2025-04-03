@@ -31,4 +31,3 @@ spec:
         name: prometheus-community
         namespace: prometheus-community
       interval: 12h
-
