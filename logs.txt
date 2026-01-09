@@ -1,0 +1,56 @@
+☁  3nodecluster  export GITHUB_USER="devopsabi@gmail.com"                                                                           
+☁  3nodecluster  
+☁  3nodecluster  flux bootstrap github --token-auth --owner=devopsabi --repository=fluxcd-test --branch=main --path=clusters/production --personal
+► connecting to github.com
+► cloning branch "main" from Git repository "https://github.com/devopsabi/fluxcd-test.git"
+✔ cloned repository
+► generating component manifests
+✔ generated component manifests
+✔ component manifests are up to date
+► installing components in "flux-system" namespace
+✔ installed components
+✔ reconciled components
+► determining if source secret "flux-system/flux-system" exists
+► generating source secret
+► applying source secret "flux-system/flux-system"
+✔ reconciled source secret
+► generating sync manifests
+✔ generated sync manifests
+✔ sync manifests are up to date
+► applying sync manifests
+✔ reconciled sync configuration
+◎ waiting for GitRepository "flux-system/flux-system" to be reconciled
+✔ GitRepository reconciled successfully
+◎ waiting for Kustomization "flux-system/flux-system" to be reconciled
+✔ Kustomization reconciled successfully
+► confirming components are healthy
+✔ helm-controller: deployment ready
+✔ kustomize-controller: deployment ready
+✔ notification-controller: deployment ready
+✔ source-controller: deployment ready
+✔ all components are healthy
+☁  3nodecluster  
+
+
+
+
+flux get kustomizations -w
+NAME	REVISION	SUSPENDED	READY	MESSAGE                                             
+apps	        	False    	False	dependency 'flux-system/infra-configs' is not ready	
+flux-system	main@sha1:65940075	False	True	Applied revision: main@sha1:65940075	
+infra-configs	main@sha1:65940075	False	True	Applied revision: main@sha1:65940075	
+infra-controllers	main@sha1:65940075	False	True	Applied revision: main@sha1:65940075	
+apps		False	Unknown	Reconciliation in progress	
+apps		False	Unknown	Reconciliation in progress	
+apps		False	Unknown	Reconciliation in progress	
+apps		False	Unknown	Reconciliation in progress	
+apps		False	Unknown	Reconciliation in progress	
+apps		False	Unknown	Reconciliation in progress	
+
+apps		False	Unknown	Reconciliation in progress	
+apps		False	True	Applied revision: main@sha1:65940075	
+apps	main@sha1:65940075	False	True	Applied revision: main@sha1:65940075	
+
+
+
+
