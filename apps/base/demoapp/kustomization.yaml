@@ -4,3 +4,4 @@ namespace: demo
 resources:
   - namespace.yaml
   - release.yaml
+  - service.yaml

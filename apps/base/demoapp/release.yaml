@@ -1,13 +1,22 @@
-kind: Pod 
-apiVersion: v1 
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-    name: green-pod 
-    labels:
-        app: green-app
-        release: beta
-        environment: dev
-        team: team-green
+  name: app01
+  labels:
+    app: app01
 spec:
-    containers:
-        -   name: demo-container
-            image: devopsabi/kubernetes_test_app_green:1.0
+  selector:
+    matchLabels:
+      app: app01
+  replicas: 2
+  template:
+    metadata:
+      annotations:
+      labels:
+        app: app01
+    spec:
+      containers:
+      - name: app01
+        image: devopsabi/demo-app-k8s:01
+        ports:
+        - containerPort: 8080
