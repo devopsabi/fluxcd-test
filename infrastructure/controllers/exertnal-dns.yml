@@ -13,7 +13,7 @@ metadata:
   namespace: external-dns
 spec:
   interval: 24h
-  url: external-dns/external-dns
+  url: https://kubernetes-sigs.github.io/external-dns/   
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
