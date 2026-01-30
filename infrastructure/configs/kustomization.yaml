@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
   - clusterissuer-selfsigned.yaml
   - cluster-issuers.yaml
-  - certificate-wildcard.yaml
+#  - certificate-wildcard.yaml
