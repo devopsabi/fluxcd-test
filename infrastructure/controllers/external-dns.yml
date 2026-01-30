@@ -33,5 +33,3 @@ spec:
       interval: 12h
   values:
     installCRDs: true
-    extraArgs:
-      - --AWS_DEFAULT_REGION=us-east-1
