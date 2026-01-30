@@ -34,4 +34,4 @@ spec:
   values:
     installCRDs: true
     extraArgs:
-      - --AWS_REGION=us-east-1
+      - --AWS_DEFAULT_REGION=us-east-1
