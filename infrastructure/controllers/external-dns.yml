@@ -26,6 +26,7 @@ spec:
     spec:
       chart: external-dns
       version: "1.x"
+      serviceAccountName: external-dns
       sourceRef:
         kind: HelmRepository
         name: external-dns
