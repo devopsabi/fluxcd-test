@@ -20,6 +20,9 @@ spec:
         image: devopsabi/demo-app-k8s:01
         ports:
         - containerPort: 8080
+        envFrom:
+            - configMapRef:
+                name: demo-app-cm # Kustomize will automatically update this name
       volumeMounts:
         - name: config-volume
           mountPath: /config/application.properties
