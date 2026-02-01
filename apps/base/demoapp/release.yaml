@@ -20,3 +20,11 @@ spec:
         image: devopsabi/demo-app-k8s:01
         ports:
         - containerPort: 8080
+      volumeMounts:
+        - name: config-volume
+          mountPath: /config/application.properties
+          subPath: application.properties # Mounts just the file, not the folder
+      volumes:
+      - name: config-volume
+        configMap:
+          name: app-properties # Kustomize handles the name hashing automatically

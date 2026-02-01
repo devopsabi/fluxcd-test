@@ -5,3 +5,8 @@ resources:
   - namespace.yaml
   - release.yaml
   - service.yaml
+
+configMapGenerator:
+  - name: demo-app-cm
+    files:
+      - application.properties
