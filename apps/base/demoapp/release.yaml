@@ -25,7 +25,7 @@ spec:
                 name: demo-app-cm # Kustomize will automatically update this name
       volumeMounts:
         - name: config-volume
-          mountPath: /app/application.properties
+          mountPath: /app-test/application.properties
           subPath: application.properties # Mounts just the file, not the folder
       volumes:
       - name: config-volume
