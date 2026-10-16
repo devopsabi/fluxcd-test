@@ -3,7 +3,7 @@ metadata:
   name: infra-controllers-resources
 kind: Kustomization
 resources:
-  - cert-manager.yaml
+#  - cert-manager.yaml
   - ingress-nginx.yaml
   - kube-prometheus-stack.yaml
 #  - external-dns.yml
