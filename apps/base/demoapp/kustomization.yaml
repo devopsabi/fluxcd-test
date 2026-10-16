@@ -5,6 +5,7 @@ kind: Kustomization
 namespace: demo
 resources:
   - namespace.yaml
+  - namespace-quota.yaml
   - release.yaml
   - service.yaml
 
